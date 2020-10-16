@@ -5,9 +5,11 @@ zipcode = input('What is your zipcode? :')
 
 conn = http.client.HTTPSConnection("us-weather-by-zip-code.p.rapidapi.com")
 
+# Enter your personal key that you recieve from https://rapidapi.com/
+# You will get a key for free when you sign up.
 headers = {
     'x-rapidapi-host': "us-weather-by-zip-code.p.rapidapi.com",
-    'x-rapidapi-key': "87150c8337msh689ce6b15fb86e9p196a27jsn583463ea8378"
+    'x-rapidapi-key': "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 }
 
 conn.request("GET", f"/getweatherzipcode?zip={zipcode}", headers=headers)
